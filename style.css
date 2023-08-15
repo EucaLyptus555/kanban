@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    background-image: url(./img/bg2-bicubic.jpg);
+    background-repeat: no-repeat;
+    min-width: 0px;
+    font-family: 'PT Sans' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+}
+
+/* ____________INDEX____________ */
+
+.navbar {
+    display: none !important;
+}
+
+.mainPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 46px;
+    padding-bottom: 46px;
+}
+
+.sideBar {
+    background-image: url(./img/bg.jpg);
+    height: 100vh;
+    width: 115px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 45%;
+    box-shadow: 0 0 20px 8px darkgrey;
+}
+
+.mainLinks a {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    text-decoration: none;
+    color: #fff2f2;
+    display: flex;
+    gap: 1em;
+    font-size: 16px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.mainLinks li:hover {
+    background-color: #FF9B67;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 7px 13px 20px 0px #535151;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.mainLinks li {
+    padding: 5px 14px;
+}
+
+.profilePic img {
+    margin-right: 16px;
+    border-radius: 50%;
+    border: solid coral;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+.mainTaskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    flex-flow: wrap;
+}
+
+.task {
+    position: relative;
+    height: 90vh;
+    width: 200px;
+    background: #ff5a0042;
+    margin: 0 8px;
+    border-radius: 32px;
+    text-align: center;
+    color: #7d0000;
+    cursor: pointer;
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: #7d0000 #ff5a0042;
+    scrollbar-width: thin;
+    
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ff5a0042;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7d0000;
+    border-radius: 20px;
+}
+
+
+.grab {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.grab:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.grabbable {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.grabbable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.task h5 {
+    font-weight: bold;
+    font-family: 'PT Sans' !important;
+}
+
+.dnone {
+    display: none;
+
+}
+
+.popup {
+    z-index: 2;
+    position: fixed;
+    top: 19%;
+    /* top: 138px; */
+    left: 18%;
+}
+
+/* ____________BOARD____________ */
+
+.newTask {
+    background-color: antiquewhite;
+    border-radius: 32px;
+    padding: 8px;
+    margin: 8px;
+    box-shadow: 0px 10px 5px -2px rgba(0, 0, 0, 0.85);
+}
+
+.taskIcons:hover {
+    cursor: pointer;
+}
+
+.profilePicTask {
+    border-radius: 50%;
+}
+
+.boardImg:hover {
+    cursor: pointer;
+}
+
+.descriptionHeader {
+    word-wrap: break-word;
+}
+
+.description {
+    word-wrap: break-word;
+}
+
+.dragAreaHighlight {
+    background: #FF9D66;
+}
+
+/* ____________BACKLOG____________ */
+.headline {
+    margin: 48px;
+    margin-left: 28px;
+}
+
+.headline1 h3{
+margin-top: 0px;
+font-family: 'PT Sans' !important;
+font-weight: bold;
+margin-bottom: 0px;
+}
+
+.headline span {
+    color: #ff9900;
+}
+.headline1 span {
+    color: #ff9900;
+}
+
+.headline h3 {
+    font-family: 'PT Sans' !important;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+#backlogDiv {
+    margin: 24px;
+}
+
+.backlogContent {
+    background: #ff5a0042;
+}
+
+.tableDiv {
+    font-family: 'PT Sans' !important;
+    display: flex;
+    justify-content: center;
+}
+
+.tableDiv table {
+    -webkit-border-horizontal-spacing: 0;
+    -webkit-border-vertical-spacing: 12px;
+    margin: 30px;
+    font-family: 'PT Sans' !important;
+}
+
+table td:first-child {
+    font-family: 'PT Sans' !important;
+    display: flex;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 15px solid #7d0000;
+    height: 80px;
+    align-items: center;
+    margin-left: -9px;
+}
+
+table td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+table h5 {
+    text-align: center;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px;
+}
+
+.taskCreator {
+    padding: 2px;
+    font-family: 'PT Sans' !important;
+}
+
+/* ____________RESPONSIVE____________ */
+
+@media only screen and (max-width: 1062px) {
+    .mainTaskContainer {
+        flex-direction: row;
+        padding: 8px;
+        height: fit-content;
+    }
+
+    .task {
+        min-height: 400px;
+        max-height: 600px;
+        margin: 8px;
+    }
+
+    .logo1 {
+        height: 50px;
+    }
+
+    .priority {
+        display: none;
+    }
+
+    .category {
+        display: none;
+    }
+
+    .cc1 {
+        display: none;
+    }
+    .pp1 {
+        display: none;
+    }
+}
+
+
+/* ____________RESPONSIVE____________ */
+
+@media only screen and (max-width: 1062px) {
+    .mainTaskContainer {
+        flex-direction: row;
+        padding: 8px;
+        height: fit-content;
+    }
+    body {
+        background-size: 3000px;
+    }
+
+    .task {
+        min-height: 400px;
+        margin: 8px
+    }
+
+    .logo1 {
+        height: 50px;
+    }
+}
+
+/* ____________INFO____________ */
+
+.infoText {
+    display: flex;
+    align-items: flex-start;
+    padding: 24px;
+    flex-direction: column;
+}
+
+.infoText h4 {
+    font-weight: bold;
+}
+
+.imprintPrivacy {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: x-large;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.imprintPrivacy a:hover {
+    background-color: rgb(240, 128, 128);
+    border-radius: 15px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    box-shadow: 7px 13px 20px 0px #535151;
+    padding: 6px;
+}
+
+.imprint {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 30px;
+    max-width: 1000px;
+    padding-left: 150px;
+}
+
+
